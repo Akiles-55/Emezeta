@@ -1,0 +1,162 @@
+/* Sticky Footer usando flex en body */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #2f2f2f;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 40px;
+}
+
+.container {
+    width: 90%;
+    max-width: 700px;
+    padding: 30px;
+    background-color: #333;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Título principal */
+.title {
+    color: #ff4f58;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Formulario */
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.file-input {
+    padding: 10px;
+    background-color: #555;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    width: 70%;
+}
+
+.submit-btn {
+    padding: 12px 24px;
+    background-color: #ff4f58;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #cc3d47;
+}
+
+.error-message {
+    color: red;
+    margin-top: 20px;
+}
+
+.loading {
+    margin-top: 30px;
+    font-size: 18px;
+    color: #ff4f58;
+}
+
+.spinner {
+    margin: 20px auto;
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ccc;
+    border-top: 5px solid #ff4f58;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Pistas */
+.tracks-title {
+    color: #ff4f58;
+    font-size: 24px;
+    margin-top: 30px;
+}
+
+.tracks-list {
+    list-style: none;
+    padding: 0;
+}
+
+.track-item {
+    background-color: #444;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.track-name {
+    font-weight: bold;
+}
+
+.audio-player {
+    width: 200px;
+}
+
+/* Mensaje cuando no hay pistas */
+.no-tracks-message {
+    color: #999;
+    margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+    background-color: #222;
+    color: #aaa;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 10px;
+}
+
+.social-icon {
+    font-size: 28px;
+    color: white;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+.facebook { color: #3b5998; }
+.whatsapp { color: #25d366; }
+.instagram { color: #e4405f; }
